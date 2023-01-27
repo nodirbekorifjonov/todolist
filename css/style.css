@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  /* background-color: #00425a; */
+  background-image: linear-gradient(
+    to right top,
+    #004862,
+    #004b5d,
+    #004e53,
+    #004f46,
+    #084f36
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: 500px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 50px 60px;
+}
+
+form {
+  margin: 0 auto;
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  margin-bottom: 30px;
+}
+
+form input {
+  width: 80%;
+  padding: 5px 10px;
+  margin-right: auto;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-size: 18px;
+}
+
+.add {
+  padding: 10px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #fc7300;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.add:hover {
+  opacity: 0.8;
+}
+
+.add:active {
+  opacity: 0.6;
+}
+
+.list-wrapper {
+  height: 330px;
+  padding-right: 5px;
+  overflow-y: auto;
+}
+
+.list-wrapper::-webkit-scrollbar {
+  border-radius: 5px;
+  width: 3px;
+}
+
+.list-wrapper::-webkit-scrollbar-thumb {
+  width: 3px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.item {
+  padding: 10px 15px;
+  border-radius: 2px;
+  background-color: #f7efe5;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns button {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btns button:nth-child(1) {
+  background-color: green;
+}
+
+.btns button:nth-child(2) {
+  background-color: red;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.item.active p {
+  text-decoration: line-through;
+  color: rgb(126, 126, 126);
+}
+
+.item.active .check {
+  background-color: rgba(78, 150, 78, 0.671);
+}
+
+.item.active {
+  background-color: rgb(204, 204, 204);
+}
